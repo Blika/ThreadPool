@@ -1,2 +1,3 @@
 # ThreadPool
-Simple Thread Pool for C++
+
+A simple realization of thread pool in C++.
