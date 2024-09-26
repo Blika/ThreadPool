@@ -15,7 +15,12 @@ else(WIN32)
     set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "${CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS} -static-libgcc -static-libstdc++ -s")
 endif()
 set(CMAKE_CXX_STANDARD 20)
-project(threadpool)
+if(DEBUG)
+    add_compile_options(-g)
+    project(debug__threadpool)
+else()
+    project(threadpool)
+endif()
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
