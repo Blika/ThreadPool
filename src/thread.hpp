@@ -19,7 +19,7 @@ namespace threadpool{
             Thread &operator=(Thread&&) = delete;
 
             int32_t getWeight();
-            void addToQueue(const std::function<void()>& func, const int32_t& weight);
+            void addToQueue(std::function<void()>&& func, const int32_t& weight);
             bool busy();
 
         private:
