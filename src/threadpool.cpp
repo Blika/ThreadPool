@@ -20,7 +20,7 @@ namespace threadpool{
         threads.clear();
     }
 
-    void ThreadPool::assignNewTask(std::function<void()>&& func, const int32_t& weight){
+    void ThreadPool::assignNewTask(std::function<void()>&& func, int32_t weight){
         uint32_t t = getLeastBusyThread();
         threads[t]->addToQueue(std::move(func),weight);
     }

@@ -15,7 +15,7 @@ namespace threadpool{
             ThreadPool(ThreadPool&&) = delete;
             ThreadPool &operator=(ThreadPool&&) = delete;
 
-            void assignNewTask(std::function<void()>&& func, const int32_t& weight);
+            void assignNewTask(std::function<void()>&& func, int32_t weight);
             void wait();
 
         private:

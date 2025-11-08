@@ -6,7 +6,7 @@
 std::mutex coutMutex;
 int t = 0;
 
-void test(const int& a, const int& b){
+void test(int a, int b){
     std::lock_guard<std::mutex> lock(coutMutex);
     std::cout << a << " " << b << " " << a + b << std::endl;
     t++;
